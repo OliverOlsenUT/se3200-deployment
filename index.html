@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Nintendo Switch Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1>Recommended Nintendo Switch Games</h1>
+    <hr>
+    <section>
+    </section>
+    <input type="text" id="input-game-name" placeholder="What's the game's name?">
+    <input type="text" id="input-game-genres" placeholder="What genre(s) is it?">
+    <select name="ratings" id="input-game-esrb">
+        <option value="E">Rated E for Everyone</option>
+        <option value="E10+">Rated E10+ for Everyone 10+</option>
+        <option value="T">Rated T for Teen</option>
+        <option value="M">Rated M for Mature</option>
+    </select>
+    <input type="number" id="input-game-cost" placeholder="How much does it cost?">
+    <textarea placeholder="Enter your review/summary of the game here." id="input-game-review"></textarea><br>
+    <button id="save-review-button">Save Video Game</button>
+    <button id="cancel-review-button" style="visibility: hidden;">Cancel</button>
+    <!-- Everything MUST be above this!-->
+    <script src="app.js"></script>
+</body>
+
+</html>

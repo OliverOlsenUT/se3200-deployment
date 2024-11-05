@@ -1,0 +1,51 @@
+* {
+    font-family: "Fredoka", sans-serif;
+}
+h1 {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    text-align: center;
+}
+body {
+    justify-content: center;
+    display: grid;
+}
+section
+{
+    display: grid;
+    justify-content: center;
+    background-color: rgb(230, 0, 18);
+    color: white;
+    border-radius: 15px;
+    width: 70vw;
+    margin: 20px;
+    padding: 20px
+}
+section h2 {
+    font-family: "Fredoka", sans-serif;
+    text-align: center;
+    font-size: 2rem;
+}
+section h3 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+button {
+    font-family: "Fredoka", sans-serif;
+    font-size: 1.5rem;
+    background-color: rgb(255, 50, 50);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 10px;
+}
+input, textarea {
+    margin: 10px;
+}
+textarea {
+    height: 200px;
+}
