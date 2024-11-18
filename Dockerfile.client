@@ -1,0 +1,15 @@
+FROM ubuntu:latest
+
+WORKDIR /var/www/html/
+
+RUN apt-get update && \
+    apt-get install -y apache2 && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY index.html /var/www/html/
+COPY style.css /var/www/html/
+COPY app.js /var/www/html/
+
+EXPOSE 80
+
+CMD ["apachectl", "-D", "FOREGROUND"]
