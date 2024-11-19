@@ -59,7 +59,7 @@ def update_game(game_id):
         return "Could not find game with ID " + str(game_id), 404, {"Access-Control-Allow-Origin" : "*"}
 
 def run():
-    app.run(port=8080)
+    app.run(port=8080, host="0.0.0.0")
 
 if __name__ == "__main__":
     run()

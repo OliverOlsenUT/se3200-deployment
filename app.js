@@ -1,3 +1,6 @@
+const serverURL = window.location.protocol === 'file:' 
+? "http://localhost:8080" // local url for development
+: ""; // prod url
 console.log("connected");
 let inputGameName = document.querySelector("#input-game-name");
 let inputGameGenres = document.querySelector("#input-game-genres");
@@ -18,7 +21,7 @@ function saveReview() {
         "&review=" + encodeURIComponent(inputGameReview.value);
     console.log(data);
     cancelReviewButton.style.visibility = "hidden";
-    let url = "http://127.0.0.1:8080/games";
+    let url = serverURL + "/games";
     let method = "POST";
     if (editId) {
         url += "/" + editId;
@@ -65,8 +68,8 @@ function addGameReview(obj) {
     deleteButton.onclick = function() {
         if (confirm("Are you sure you want to delete " + obj.name +"?"))
         {
-            console.log("http://127.0.0.1:8080/games/" + obj.id);
-            fetch("http://127.0.0.1:8080/games/" + obj.id,
+            console.log(serverURL + "/games/" + obj.id);
+            fetch(serverURL + "/games/" + obj.id,
                 {
                     method: "DELETE"
                 }
@@ -95,7 +98,7 @@ function addGameReview(obj) {
 }
 
 function fetch_games() {
-    fetch("http://127.0.0.1:8080/games")
+    fetch(serverURL + "/games")
         .then(function (response) {
             response.json()
                 .then(function (data) {
