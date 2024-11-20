@@ -13,8 +13,8 @@ docker push YOUR-USER-NAME/example
 **Apply the YAML Files**
    Ensure your Kubernetes is running and configured. Then apply the YAML files:
 ```
-kubectl apply -f server.yaml
-kubectl apply -f client.yaml
+kubectl apply -f frontend.yaml
+kubectl apply -f backend.yaml
 kubectl apply -f ingress.yaml
 Ingress is already set and the site should be accessible at https://oo.coureur.life/
 Docker images are also configuired and can be accessed at austin963/frontend and austin963/backend on dockerhub
